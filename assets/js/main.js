@@ -11,9 +11,34 @@ Il programma dovrà chiedere all'utente:
  L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
 */
 
+//Dati
+let prezzoChilometri = 0.21
+
 //Richiesta d'età
 let etaPasseggero = Number(prompt("Quanti anni hai?"));
 console.log("Il passeggero ha" + " " + etaPasseggero + " " + "anni.")
-let chilometri = prompt("Quanti chilometri vuoi percorrere?");
-console.log("Il passeggero vuole percorrere" + " " + chilometri + ".")
+let chilometri = Number(prompt("Quanti chilometri vuoi percorrere?"));
+console.log("Il passeggero vuole percorrere" + " " + chilometri + " " + "chilometri.")
 
+//Calcolo prezzo
+
+let prezzo = chilometri * prezzoChilometri
+let costoFinale
+
+//Calcolo sconto minorenni 20%
+if (etaPasseggero < 18) {
+
+    costoFinale = prezzo - (prezzo * 20 / 100)     
+
+} else if (etaPasseggero > 65) {
+
+    costoFinale = prezzo - (prezzo * 40 / 100)  
+
+} else {
+
+    costoFinale = prezzo
+    
+}
+
+//Comunicazione prezzo
+document.getElementById('comunicazione').innerHTML = "Dovrai pagare in totale:" + " " + costoFinale + "euro."
