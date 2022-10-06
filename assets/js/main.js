@@ -16,9 +16,7 @@ let prezzoChilometri = 0.21
 
 //Richiesta d'età
 let etaPasseggero = Number(prompt("Quanti anni hai?"));
-console.log("Il passeggero ha" + " " + etaPasseggero + " " + "anni.")
 let chilometri = Number(prompt("Quanti chilometri vuoi percorrere?"));
-console.log("Il passeggero vuole percorrere" + " " + chilometri + " " + "chilometri.")
 
 //Calcolo prezzo
 
