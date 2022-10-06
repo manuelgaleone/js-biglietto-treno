@@ -39,4 +39,4 @@ if (etaPasseggero < 18) {
 }
 
 //Comunicazione prezzo
-document.getElementById('comunicazione').innerHTML = "Dovrai pagare in totale:" + " " + costoFinale + "euro."
+document.getElementById('comunicazione').innerHTML = "Dovrai pagare in totale:" + " " + (costoFinale).toFixed(2) + "euro."
